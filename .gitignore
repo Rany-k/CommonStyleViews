@@ -4,6 +4,9 @@ build/
 ViewStyleCore/build/
 ViewStyleCore/src/test/
 ViewStyleCore/src/androidTest/
+CommonView/build/
+CommonView/src/test/
+CommonView/src/androidTest/
 
 
 # Local configuration file (sdk path, etc)

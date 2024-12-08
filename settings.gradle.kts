@@ -22,4 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "CommonStyleViews"
 //include(":sample")
 include(":ViewStyleCore")
-//include(":commonView")
+include(":CommonView")
