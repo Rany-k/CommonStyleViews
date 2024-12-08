@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.kotlin.android)
     `maven-publish`
 }
-
 afterEvaluate {
     publishing { // 发布配置
         publications { // 发布的内容
@@ -11,6 +10,7 @@ afterEvaluate {
                 groupId = "com.github.Rany-k"
                 artifactId = "CommonStyleViews"
                 version = "0.1.0-SNAPSHOT"
+                from(components.getByName("release"))
             }
         }
     }
