@@ -9,7 +9,7 @@ afterEvaluate {
         publications { // 发布的内容
             create<MavenPublication>("release") {
                 groupId = "com.github.Rany-k"
-                artifactId = "CommonStyleViews:CommonView"
+                artifactId = "CommonStyleViews-CommonView"
                 version = "0.1.0-SNAPSHOT"
                 from(components.getByName("release"))
             }
