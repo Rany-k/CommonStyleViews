@@ -20,6 +20,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "CommonStyleViews"
-//include(":sample")
+include(":sample")
 include(":ViewStyleCore")
 include(":CommonView")
