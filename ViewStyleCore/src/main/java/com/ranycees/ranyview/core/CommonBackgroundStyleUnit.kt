@@ -97,10 +97,17 @@ class CommonBackgroundStyleUnit(private val targetView: View):CommonBackgroundSt
     }
 
     fun onPaintDraw(canvas: Canvas) {
+        onBackgroundPaintDraw(canvas)
+        onStrokePaintDraw(canvas)
+    }
+
+    fun onBackgroundPaintDraw(canvas: Canvas){
         if (fillPaint != null && drawRect != null) {
             canvas.drawRoundRect(drawRect!!, paintRadius, paintRadius, fillPaint!!)
         }
+    }
 
+    fun onStrokePaintDraw(canvas: Canvas){
         if (strokePaint != null && drawRect != null) {
             canvas.drawRoundRect(drawRect!!, paintRadius, paintRadius, strokePaint!!)
         }
@@ -219,6 +226,10 @@ class CommonBackgroundStyleUnit(private val targetView: View):CommonBackgroundSt
         buildStrokeShader(targetView.width.toFloat(), targetView.height.toFloat())
         buildFillShader(targetView.width.toFloat(), targetView.height.toFloat())
         targetView.invalidate()
+    }
+
+    fun getRadius():Float{
+        return paintRadius
     }
 
     override fun setDeviation(@DEVIATION deviation: Int) {
