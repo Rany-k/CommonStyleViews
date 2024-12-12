@@ -17,6 +17,8 @@ import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
 import com.ranycees.ranyview.core.CommonBackgroundStyleOperate
 import com.ranycees.ranyview.core.CommonBackgroundStyleUnit
+import androidx.annotation.ColorInt
+import com.ranycees.ranyview.core.CommonBackgroundStyleUnit.DEVIATION
 
 class ImageViewR @JvmOverloads constructor(
     context: Context,
@@ -89,11 +91,11 @@ class ImageViewR @JvmOverloads constructor(
         commonBackgroundStyle.setStrokeWidth(width)
     }
 
-    override fun setStrokeColors(vararg colors: Int) {
+    override fun setStrokeColors(@ColorInt vararg colors: Int) {
         commonBackgroundStyle.setStrokeColors(*colors)
     }
 
-    override fun setBackgroundColors(vararg colors: Int) {
+    override fun setBackgroundColors(@ColorInt vararg colors: Int) {
         commonBackgroundStyle.setBackgroundColors(*colors)
     }
 
@@ -101,15 +103,15 @@ class ImageViewR @JvmOverloads constructor(
         commonBackgroundStyle.setRadius(radius)
     }
 
-    override fun setDeviation(deviation: Int) {
+    override fun setDeviation(@DEVIATION deviation: Int) {
         commonBackgroundStyle.setDeviation(deviation)
     }
 
-    override fun setStrokeDeviation(deviation: Int) {
+    override fun setStrokeDeviation(@DEVIATION deviation: Int) {
         commonBackgroundStyle.setStrokeDeviation(deviation)
     }
 
-    override fun setBackgroundDeviation(deviation: Int) {
+    override fun setBackgroundDeviation(@DEVIATION deviation: Int) {
         commonBackgroundStyle.setBackgroundDeviation(deviation)
     }
 
