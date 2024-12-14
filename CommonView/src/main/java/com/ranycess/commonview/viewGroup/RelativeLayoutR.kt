@@ -24,9 +24,9 @@ class RelativeLayoutR @JvmOverloads constructor(
         commonBackgroundStyle.onSizeChanged(w,h)
     }
 
-    override fun onDraw(canvas: Canvas) {
+    override fun dispatchDraw(canvas: Canvas) {
         commonBackgroundStyle.onPaintDraw(canvas)
-        super.onDraw(canvas)
+        super.dispatchDraw(canvas)
     }
 
     override fun setStrokeWidth(width: Float) {

@@ -53,6 +53,8 @@ dependencies {
 
     implementation(project(":ViewStyleCore"))
     implementation(project(":CommonView"))
-//    implementation("com.github.Rany-k.CommonStyleViews:CommonStyleViews-CommonView:1.0.0")
-//    implementation("com.github.Rany-k.CommonStyleViews:CommonStyleViews-Core:1.0.0")
+//    implementation(files("libs/ViewStyleCore.aar"))
+//    implementation(files("libs/CommonView.aar"))
+//    implementation("com.github.Rany-k.CommonStyleViews:CommonStyleViews-CommonView:1.0.0-Beta02")
+//    implementation("com.github.Rany-k.CommonStyleViews:CommonStyleViews-Core:1.0.0-Beta02")
 }

@@ -1,25 +1,545 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    tools:context=".MainActivity">
+    android:background="#000000">
 
-    <com.ranycess.commonview.view.TextViewR
-        android:layout_width="wrap_content"
+    <com.ranycess.commonview.viewGroup.ConstraintLayoutR
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello \nWorld!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:background_colors="#ff0000,#00ff00,#0000ff"/>
+        app:background_radius="10dp"
+        app:stroke_alive="true"
+        app:stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
+        app:stroke_width="2dp">
 
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"/>-->
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/layout_doc"
+            style="@style/titleTemplate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="ConstraintLayoutR ↑"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/click_set"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:text="Code Set Test"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/layout_doc"
+            app:layout_constraintTop_toTopOf="@+id/layout_doc" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/only_stroke_title"
+            style="@style/titleTemplate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="Only Stroke"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_doc" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/only_stroke_1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="stroke"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/only_stroke_title"
+            app:stroke_colors="#BD96F3"
+            app:stroke_width="2dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/only_stroke_2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="stroke"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/only_stroke_1"
+            app:layout_constraintTop_toTopOf="@+id/only_stroke_1"
+            app:stroke_colors="#BD96F3"
+            app:stroke_width="2dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/only_stroke_3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="stroke"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/only_stroke_2"
+            app:layout_constraintTop_toTopOf="@+id/only_stroke_2"
+            app:stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:stroke_width="2dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/only_background_title"
+            style="@style/titleTemplate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="Only Background"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/only_stroke_1" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/only_background_1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="background"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:background_colors="#BD96F3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/only_background_title" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/only_background_2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="background"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:background_colors="#BD96F3"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/only_background_1"
+            app:layout_constraintTop_toTopOf="@+id/only_background_1" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/only_background_3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="background"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/only_background_2"
+            app:layout_constraintTop_toTopOf="@+id/only_background_2" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/all_title"
+            style="@style/titleTemplate"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="All"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/only_background_1" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/all_1"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="all"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:background_colors="#BD96F3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/all_title"
+            app:stroke_colors="#FB7F7F"
+            app:stroke_width="2dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/all_2"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="all"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:background_colors="#BD96F3"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/all_1"
+            app:layout_constraintTop_toTopOf="@+id/all_1"
+            app:stroke_colors="#FB7F7F"
+            app:stroke_width="2dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/all_3"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="all"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/all_2"
+            app:layout_constraintTop_toTopOf="@+id/all_2"
+            app:stroke_colors="#FB7F7F,#FFFFFF,#A9FBCE"
+            app:stroke_width="2dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/deviation_title"
+            style="@style/titleTemplate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="Deviation"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/all_1" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/deviation_1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="VERTICAL"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:background_colors="#FFFFFF"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deviation_title"
+            app:stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:stroke_deviation="VERTICAL"
+            app:stroke_width="4dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/deviation_2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="HORIZONTAL"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:background_colors="#FFFFFF"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/deviation_1"
+            app:layout_constraintTop_toTopOf="@+id/deviation_1"
+            app:stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:stroke_deviation="HORIZONTAL"
+            app:stroke_width="4dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/deviation_3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="S_DOWN"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:background_colors="#FFFFFF"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/deviation_2"
+            app:layout_constraintTop_toTopOf="@+id/deviation_2"
+            app:stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:stroke_deviation="SLANTING_DOWN"
+            app:stroke_width="4dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/deviation_4"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="S_TOP"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:background_colors="#FFFFFF"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/deviation_3"
+            app:layout_constraintTop_toTopOf="@+id/deviation_3"
+            app:stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:stroke_deviation="SLANTING_TOP"
+            app:stroke_width="4dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/deviation_21"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="VERTICAL"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:background_deviation="VERTICAL"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deviation_1"
+            app:stroke_colors="#FFFFFF"
+            app:stroke_width="2dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/deviation_22"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="HORIZONTAL"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:background_deviation="HORIZONTAL"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/deviation_21"
+            app:layout_constraintTop_toTopOf="@+id/deviation_21"
+            app:stroke_colors="#FFFFFF"
+            app:stroke_width="2dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/deviation_23"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="S_DOWN"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:background_deviation="SLANTING_DOWN"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/deviation_22"
+            app:layout_constraintTop_toTopOf="@+id/deviation_22"
+            app:stroke_colors="#FFFFFF"
+            app:stroke_width="2dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/deviation_24"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="S_TOP"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:background_deviation="SLANTING_TOP"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/deviation_23"
+            app:layout_constraintTop_toTopOf="@+id/deviation_23"
+            app:stroke_colors="#FFFFFF"
+            app:stroke_width="2dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/image_title"
+            style="@style/titleTemplate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="Image"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deviation_21" />
+
+
+        <com.ranycess.commonview.view.ImageViewR
+            android:id="@+id/image_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/test_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_title" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/image_doc_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="common"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/image_1"
+            app:layout_constraintStart_toStartOf="@+id/image_1"
+            app:layout_constraintTop_toBottomOf="@+id/image_1" />
+
+        <com.ranycess.commonview.view.ImageViewR
+            android:id="@+id/image_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/test_image"
+            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:layout_constraintStart_toEndOf="@+id/image_1"
+            app:layout_constraintTop_toTopOf="@+id/image_1" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/image_doc_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="background"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/image_2"
+            app:layout_constraintStart_toStartOf="@+id/image_2"
+            app:layout_constraintTop_toBottomOf="@+id/image_2" />
+
+        <com.ranycess.commonview.view.ImageViewR
+            android:id="@+id/image_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/test_image"
+            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/image_2"
+            app:layout_constraintTop_toTopOf="@+id/image_2" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/image_doc_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="round"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/image_3"
+            app:layout_constraintStart_toStartOf="@+id/image_3"
+            app:layout_constraintTop_toBottomOf="@+id/image_3" />
+
+        <com.ranycess.commonview.view.ImageViewR
+            android:id="@+id/image_4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/test_image"
+            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:background_radius="25dp"
+            app:layout_constraintStart_toEndOf="@+id/image_3"
+            app:layout_constraintTop_toTopOf="@+id/image_3" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/image_doc_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="circle"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/image_4"
+            app:layout_constraintStart_toStartOf="@+id/image_4"
+            app:layout_constraintTop_toBottomOf="@+id/image_4" />
+
+        <com.ranycess.commonview.view.ImageViewR
+            android:id="@+id/image_5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/test_image"
+            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/image_4"
+            app:layout_constraintTop_toTopOf="@+id/image_4"
+            app:stroke_colors="#FB7F7F,#BD96F3,#A9FBCE"
+            app:stroke_width="2dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/image_doc_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stroke"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/image_5"
+            app:layout_constraintStart_toStartOf="@+id/image_5"
+            app:layout_constraintTop_toBottomOf="@+id/image_5" />
+
+        <com.ranycess.commonview.view.ImageViewR
+            android:id="@+id/image_6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:padding="5dp"
+            android:src="@drawable/test_image"
+            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:background_radius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/image_5"
+            app:layout_constraintTop_toTopOf="@+id/image_5"
+            app:stroke_colors="#FB7F7F,#BD96F3,#A9FBCE"
+            app:stroke_width="2dp" />
+
+        <com.ranycess.commonview.view.TextViewR
+            android:id="@+id/image_doc_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="frame"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/image_6"
+            app:layout_constraintStart_toStartOf="@+id/image_6"
+            app:layout_constraintTop_toBottomOf="@+id/image_6" />
+    </com.ranycess.commonview.viewGroup.ConstraintLayoutR>
+
+</ScrollView>

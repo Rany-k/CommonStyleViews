@@ -161,7 +161,7 @@ class ImageViewR @JvmOverloads constructor(
         }
     }
 
-    private fun getBitmap(drawable: Drawable): Bitmap? {
+    private fun getBitmap(drawable: Drawable?): Bitmap? {
         if (drawable is BitmapDrawable) {
             return drawable.bitmap
         } else if (drawable is ColorDrawable) {

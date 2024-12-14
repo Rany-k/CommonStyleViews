@@ -33,13 +33,13 @@ class CommonBackgroundStyleUnit(private val targetView: View):CommonBackgroundSt
     annotation class DEVIATION
 
 
-    private var hasStroke = false
+    private var hasStroke = true
     private var strokePaint:Paint? = null
     private var strokeColors:IntArray? = null
     private var strokeDeviation = DEVIATION_HORIZONTAL
     private var strokeWidth = 0f
 
-    private var hasFill = false
+    private var hasFill = true
     private var fillPaint:Paint? = null
     private var fillColors:IntArray? = null
     private var fillDeviation = DEVIATION_HORIZONTAL
@@ -68,12 +68,10 @@ class CommonBackgroundStyleUnit(private val targetView: View):CommonBackgroundSt
         strokeWidth = typedArray.getDimension(R.styleable.CommonBackgroundStyle_stroke_width,0f)
         val strokeColorsString = typedArray.getString(R.styleable.CommonBackgroundStyle_stroke_colors)
         strokeColors = encodeColors(strokeColorsString)
-        hasStroke = typedArray.getBoolean(R.styleable.CommonBackgroundStyle_stroke_alive,false) ||strokeColors?.isNotEmpty()==true
         strokeDeviation = typedArray.getInt(R.styleable.CommonBackgroundStyle_stroke_deviation,strokeDeviation)
 
         val fillColorsString = typedArray.getString(R.styleable.CommonBackgroundStyle_background_colors)
         fillColors = encodeColors(fillColorsString)
-        hasFill= typedArray.getBoolean(R.styleable.CommonBackgroundStyle_background_alive,false) ||fillColors?.isNotEmpty()==true
         fillDeviation = typedArray.getInt(R.styleable.CommonBackgroundStyle_background_deviation,strokeDeviation)
 
 
@@ -114,7 +112,10 @@ class CommonBackgroundStyleUnit(private val targetView: View):CommonBackgroundSt
     }
 
     private fun buildStrokeShader(width: Float?, height: Float?) {
-        if (!hasStroke) return
+        if (!hasStroke || strokeColors?.isEmpty() == true) {
+            strokePaint = null
+            return
+        }
         width ?: return
         height ?: return
         if (width == 0f || height == 0f) return
@@ -123,35 +124,40 @@ class CommonBackgroundStyleUnit(private val targetView: View):CommonBackgroundSt
             strokePaint = Paint().apply {
                 this.style = Paint.Style.STROKE
                 this.isAntiAlias = true
-                this.strokeWidth = strokeWidth
+                this.strokeWidth = this@CommonBackgroundStyleUnit.strokeWidth
             }
 
-            strokePaint?.shader = when (strokeDeviation) {
-                DEVIATION_VERTICAL -> {
-                    LinearGradient(0f, 0f, 0f, height, targetColors, null, Shader.TileMode.CLAMP)
-                }
+            if(targetColors.size == 1){
+                strokePaint?.color = targetColors[0]
+                strokePaint?.shader = null
+            } else {
+                strokePaint?.shader = when (strokeDeviation) {
+                    DEVIATION_VERTICAL -> {
+                        LinearGradient(0f, 0f, 0f, height, targetColors, null, Shader.TileMode.CLAMP)
+                    }
 
-                DEVIATION_HORIZONTAL -> {
-                    LinearGradient(0f, 0f, width, 0f, targetColors, null, Shader.TileMode.CLAMP)
-                }
+                    DEVIATION_HORIZONTAL -> {
+                        LinearGradient(0f, 0f, width, 0f, targetColors, null, Shader.TileMode.CLAMP)
+                    }
 
-                DEVIATION_SLANTING_DOWN -> {
-                    LinearGradient(0f, 0f, width, height, targetColors, null, Shader.TileMode.CLAMP)
-                }
+                    DEVIATION_SLANTING_DOWN -> {
+                        LinearGradient(0f, 0f, width, height, targetColors, null, Shader.TileMode.CLAMP)
+                    }
 
-                DEVIATION_SLANTING_TOP -> {
-                    LinearGradient(0f, height, width, 0f, targetColors, null, Shader.TileMode.CLAMP)
-                }
+                    DEVIATION_SLANTING_TOP -> {
+                        LinearGradient(0f, height, width, 0f, targetColors, null, Shader.TileMode.CLAMP)
+                    }
 
-                else -> {
-                    LinearGradient(0f, 0f, width, 0f, targetColors, null, Shader.TileMode.CLAMP)
+                    else -> {
+                        LinearGradient(0f, 0f, width, 0f, targetColors, null, Shader.TileMode.CLAMP)
+                    }
                 }
             }
         }
     }
 
     private fun buildFillShader(width: Float?, height: Float?) {
-        if (!hasFill) {
+        if (!hasFill || fillColors?.isEmpty() == true) {
             fillPaint = null
             return
         }
@@ -164,27 +170,32 @@ class CommonBackgroundStyleUnit(private val targetView: View):CommonBackgroundSt
                 this.style = Paint.Style.FILL
                 this.isAntiAlias = true
             }
+            if(targetColors.size == 1){
+                fillPaint?.color = targetColors[0]
+                fillPaint?.shader = null
+            } else {
+                fillPaint?.shader = when (fillDeviation) {
+                    DEVIATION_VERTICAL -> {
 
-            fillPaint?.shader = when (strokeDeviation) {
-                DEVIATION_VERTICAL -> {
+                        LinearGradient(0f, 0f, 0f, height, targetColors, null, Shader.TileMode.CLAMP
+                        )
+                    }
 
-                    LinearGradient(0f, 0f, 0f, height, targetColors, null, Shader.TileMode.CLAMP)
-                }
+                    DEVIATION_HORIZONTAL -> {
+                        LinearGradient(0f, 0f, width, 0f, targetColors, null, Shader.TileMode.CLAMP)
+                    }
 
-                DEVIATION_HORIZONTAL -> {
-                    LinearGradient(0f, 0f, width, 0f, targetColors, null, Shader.TileMode.CLAMP)
-                }
+                    DEVIATION_SLANTING_DOWN -> {
+                        LinearGradient(0f, 0f, width, height, targetColors, null, Shader.TileMode.CLAMP)
+                    }
 
-                DEVIATION_SLANTING_DOWN -> {
-                    LinearGradient(0f, 0f, width, height, targetColors, null, Shader.TileMode.CLAMP)
-                }
+                    DEVIATION_SLANTING_TOP -> {
+                        LinearGradient(0f, height, width, 0f, targetColors, null, Shader.TileMode.CLAMP)
+                    }
 
-                DEVIATION_SLANTING_TOP -> {
-                    LinearGradient(0f, height, width, 0f, targetColors, null, Shader.TileMode.CLAMP)
-                }
-
-                else -> {
-                    LinearGradient(0f, 0f, width, 0f, targetColors, null, Shader.TileMode.CLAMP)
+                    else -> {
+                        LinearGradient(0f, 0f, width, 0f, targetColors, null, Shader.TileMode.CLAMP)
+                    }
                 }
             }
         }
@@ -205,7 +216,14 @@ class CommonBackgroundStyleUnit(private val targetView: View):CommonBackgroundSt
     //希望被委托的
     override fun setStrokeWidth(width:Float) {
         this.strokeWidth = width
+        if (targetView.width == 0 || targetView.height == 0) return
         buildStrokeShader(targetView.width.toFloat(), targetView.height.toFloat())
+        drawRect = RectF(
+            (strokePaint?.strokeWidth ?: 0f) / 2,
+            (strokePaint?.strokeWidth ?: 0f) / 2,
+            targetView.width - (strokePaint?.strokeWidth ?: 0f) / 2,
+            targetView.height - (strokePaint?.strokeWidth ?: 0f) / 2
+        )
         targetView.invalidate()
     }
 
@@ -223,6 +241,7 @@ class CommonBackgroundStyleUnit(private val targetView: View):CommonBackgroundSt
 
     override fun setRadius(radius: Float) {
         paintRadius = radius
+        if (targetView.width == 0 || targetView.height == 0) return
         buildStrokeShader(targetView.width.toFloat(), targetView.height.toFloat())
         buildFillShader(targetView.width.toFloat(), targetView.height.toFloat())
         targetView.invalidate()
