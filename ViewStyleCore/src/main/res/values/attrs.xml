@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CommonBackgroundStyle">
-        <attr name="background_radius" format="dimension" />
-        <attr name="deviation" format="enum">
+        <attr name="rany_background_radius" format="dimension" />
+        <attr name="rany_deviation" format="enum">
             <enum name="VERTICAL" value="0" />
             <enum name="HORIZONTAL" value="1" />
             <enum name="SLANTING_DOWN" value="2" />
             <enum name="SLANTING_TOP" value="3" />
         </attr>
 
-        <attr name="stroke_width" format="dimension" />
-        <attr name="stroke_colors" format="string" />
-        <attr name="stroke_deviation" format="enum">
+        <attr name="rany_stroke_width" format="dimension" />
+        <attr name="rany_stroke_colors" format="string" />
+        <attr name="rany_stroke_deviation" format="enum">
             <enum name="VERTICAL" value="0" />
             <enum name="HORIZONTAL" value="1" />
             <enum name="SLANTING_DOWN" value="2" />
             <enum name="SLANTING_TOP" value="3" />
         </attr>
 
-        <attr name="background_colors" format="string" />
-        <attr name="background_deviation" format="enum">
+        <attr name="rany_background_colors" format="string" />
+        <attr name="rany_background_deviation" format="enum">
             <enum name="VERTICAL" value="0" />
             <enum name="HORIZONTAL" value="1" />
             <enum name="SLANTING_DOWN" value="2" />
