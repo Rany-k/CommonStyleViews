@@ -1,9 +1,11 @@
-import org.gradle.internal.declarativedsl.parsing.main
-import org.gradle.kotlin.dsl.resolver.buildSrcSourceRootsFilePath
+//import org.gradle.internal.declarativedsl.parsing.main
+//import org.gradle.kotlin.dsl.resolver.buildSrcSourceRootsFilePath
 
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+//    alias(libs.plugins.android.application)
+//    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -30,8 +32,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
