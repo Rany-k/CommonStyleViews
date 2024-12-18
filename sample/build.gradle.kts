@@ -51,10 +51,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-//    implementation(project(":ViewStyleCore"))
-//    implementation(project(":CommonView"))
+    implementation(project(":ViewStyleCore"))
+    implementation(project(":CommonView"))
 //    implementation(files("libs/ViewStyleCore.aar"))
 //    implementation(files("libs/CommonView.aar"))
-    implementation("com.github.Rany-k.CommonStyleViews:CommonStyleViews-CommonView:1.0.0-Beta02")
-    implementation("com.github.Rany-k.CommonStyleViews:CommonStyleViews-Core:1.0.0-Beta02")
+//    implementation("com.github.Rany-k.CommonStyleViews:CommonStyleViews-CommonView:1.0.0-Beta02")
+//    implementation("com.github.Rany-k.CommonStyleViews:CommonStyleViews-Core:1.0.0-Beta02")
 }
