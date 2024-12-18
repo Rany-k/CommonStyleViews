@@ -10,9 +10,9 @@
     <com.ranycess.commonview.viewGroup.ConstraintLayoutR
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:background_radius="10dp"
-        app:stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
-        app:stroke_width="2dp">
+        app:rany_background_radius="10dp"
+        app:rany_stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
+        app:rany_stroke_width="2dp">
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/layout_doc"
@@ -69,8 +69,8 @@
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/only_stroke_title"
-            app:stroke_colors="#BD96F3"
-            app:stroke_width="2dp" />
+            app:rany_stroke_colors="#BD96F3"
+            app:rany_stroke_width="2dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/only_stroke_2"
@@ -82,11 +82,11 @@
             android:text="stroke"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:background_radius="10dp"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/only_stroke_1"
             app:layout_constraintTop_toTopOf="@+id/only_stroke_1"
-            app:stroke_colors="#BD96F3"
-            app:stroke_width="2dp" />
+            app:rany_stroke_colors="#BD96F3"
+            app:rany_stroke_width="2dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/only_stroke_3"
@@ -98,11 +98,11 @@
             android:text="stroke"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:background_radius="10dp"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/only_stroke_2"
             app:layout_constraintTop_toTopOf="@+id/only_stroke_2"
-            app:stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:stroke_width="2dp" />
+            app:rany_stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_stroke_width="2dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/only_background_title"
@@ -130,7 +130,7 @@
             android:text="background"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:background_colors="#BD96F3"
+            app:rany_background_colors="#BD96F3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/only_background_title" />
 
@@ -144,8 +144,8 @@
             android:text="background"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:background_colors="#BD96F3"
-            app:background_radius="10dp"
+            app:rany_background_colors="#BD96F3"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/only_background_1"
             app:layout_constraintTop_toTopOf="@+id/only_background_1" />
 
@@ -159,8 +159,8 @@
             android:text="background"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:background_radius="10dp"
+            app:rany_background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/only_background_2"
             app:layout_constraintTop_toTopOf="@+id/only_background_2" />
 
@@ -190,11 +190,11 @@
             android:text="all"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:background_colors="#BD96F3"
+            app:rany_background_colors="#BD96F3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/all_title"
-            app:stroke_colors="#FB7F7F"
-            app:stroke_width="2dp" />
+            app:rany_stroke_colors="#FB7F7F"
+            app:rany_stroke_width="2dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/all_2"
@@ -206,12 +206,12 @@
             android:text="all"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:background_colors="#BD96F3"
-            app:background_radius="10dp"
+            app:rany_background_colors="#BD96F3"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/all_1"
             app:layout_constraintTop_toTopOf="@+id/all_1"
-            app:stroke_colors="#FB7F7F"
-            app:stroke_width="2dp" />
+            app:rany_stroke_colors="#FB7F7F"
+            app:rany_stroke_width="2dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/all_3"
@@ -223,12 +223,12 @@
             android:text="all"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:background_radius="10dp"
+            app:rany_background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/all_2"
             app:layout_constraintTop_toTopOf="@+id/all_2"
-            app:stroke_colors="#FB7F7F,#FFFFFF,#A9FBCE"
-            app:stroke_width="2dp" />
+            app:rany_stroke_colors="#FB7F7F,#FFFFFF,#A9FBCE"
+            app:rany_stroke_width="2dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/deviation_title"
@@ -257,13 +257,13 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:visibility="visible"
-            app:background_colors="#FFFFFF"
-            app:background_radius="10dp"
+            app:rany_background_colors="#FFFFFF"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/deviation_title"
-            app:stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:stroke_deviation="VERTICAL"
-            app:stroke_width="4dp" />
+            app:rany_stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_stroke_deviation="VERTICAL"
+            app:rany_stroke_width="4dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/deviation_2"
@@ -275,13 +275,13 @@
             android:text="HORIZONTAL"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:background_colors="#FFFFFF"
-            app:background_radius="10dp"
+            app:rany_background_colors="#FFFFFF"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/deviation_1"
             app:layout_constraintTop_toTopOf="@+id/deviation_1"
-            app:stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:stroke_deviation="HORIZONTAL"
-            app:stroke_width="4dp" />
+            app:rany_stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_stroke_deviation="HORIZONTAL"
+            app:rany_stroke_width="4dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/deviation_3"
@@ -293,13 +293,13 @@
             android:text="S_DOWN"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:background_colors="#FFFFFF"
-            app:background_radius="10dp"
+            app:rany_background_colors="#FFFFFF"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/deviation_2"
             app:layout_constraintTop_toTopOf="@+id/deviation_2"
-            app:stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:stroke_deviation="SLANTING_DOWN"
-            app:stroke_width="4dp" />
+            app:rany_stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_stroke_deviation="SLANTING_DOWN"
+            app:rany_stroke_width="4dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/deviation_4"
@@ -311,13 +311,13 @@
             android:text="S_TOP"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:background_colors="#FFFFFF"
-            app:background_radius="10dp"
+            app:rany_background_colors="#FFFFFF"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/deviation_3"
             app:layout_constraintTop_toTopOf="@+id/deviation_3"
-            app:stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:stroke_deviation="SLANTING_TOP"
-            app:stroke_width="4dp" />
+            app:rany_stroke_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_stroke_deviation="SLANTING_TOP"
+            app:rany_stroke_width="4dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/deviation_21"
@@ -331,13 +331,13 @@
             android:textColor="@color/white"
             android:textSize="16sp"
             android:visibility="visible"
-            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:background_deviation="VERTICAL"
-            app:background_radius="10dp"
+            app:rany_background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_background_deviation="VERTICAL"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/deviation_1"
-            app:stroke_colors="#FFFFFF"
-            app:stroke_width="2dp" />
+            app:rany_stroke_colors="#FFFFFF"
+            app:rany_stroke_width="2dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/deviation_22"
@@ -349,13 +349,13 @@
             android:text="HORIZONTAL"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:background_deviation="HORIZONTAL"
-            app:background_radius="10dp"
+            app:rany_background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_background_deviation="HORIZONTAL"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/deviation_21"
             app:layout_constraintTop_toTopOf="@+id/deviation_21"
-            app:stroke_colors="#FFFFFF"
-            app:stroke_width="2dp" />
+            app:rany_stroke_colors="#FFFFFF"
+            app:rany_stroke_width="2dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/deviation_23"
@@ -367,13 +367,13 @@
             android:text="S_DOWN"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:background_deviation="SLANTING_DOWN"
-            app:background_radius="10dp"
+            app:rany_background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_background_deviation="SLANTING_DOWN"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/deviation_22"
             app:layout_constraintTop_toTopOf="@+id/deviation_22"
-            app:stroke_colors="#FFFFFF"
-            app:stroke_width="2dp" />
+            app:rany_stroke_colors="#FFFFFF"
+            app:rany_stroke_width="2dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/deviation_24"
@@ -385,13 +385,13 @@
             android:text="S_TOP"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:background_deviation="SLANTING_TOP"
-            app:background_radius="10dp"
+            app:rany_background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_background_deviation="SLANTING_TOP"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/deviation_23"
             app:layout_constraintTop_toTopOf="@+id/deviation_23"
-            app:stroke_colors="#FFFFFF"
-            app:stroke_width="2dp" />
+            app:rany_stroke_colors="#FFFFFF"
+            app:rany_stroke_width="2dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/image_title"
@@ -437,7 +437,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:src="@drawable/test_image"
-            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_background_colors="#A9FBCE,#BD96F3,#FB7F7F"
             app:layout_constraintStart_toEndOf="@+id/image_1"
             app:layout_constraintTop_toTopOf="@+id/image_1" />
 
@@ -457,8 +457,8 @@
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:src="@drawable/test_image"
-            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:background_radius="10dp"
+            app:rany_background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/image_2"
             app:layout_constraintTop_toTopOf="@+id/image_2" />
 
@@ -478,8 +478,8 @@
             android:layout_height="50dp"
             android:layout_marginStart="15dp"
             android:src="@drawable/test_image"
-            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:background_radius="25dp"
+            app:rany_background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_background_radius="25dp"
             app:layout_constraintStart_toEndOf="@+id/image_3"
             app:layout_constraintTop_toTopOf="@+id/image_3" />
 
@@ -499,12 +499,12 @@
             android:layout_height="50dp"
             android:layout_marginStart="15dp"
             android:src="@drawable/test_image"
-            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:background_radius="10dp"
+            app:rany_background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/image_4"
             app:layout_constraintTop_toTopOf="@+id/image_4"
-            app:stroke_colors="#FB7F7F,#BD96F3,#A9FBCE"
-            app:stroke_width="2dp" />
+            app:rany_stroke_colors="#FB7F7F,#BD96F3,#A9FBCE"
+            app:rany_stroke_width="2dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/image_doc_5"
@@ -523,12 +523,12 @@
             android:layout_marginStart="15dp"
             android:padding="5dp"
             android:src="@drawable/test_image"
-            app:background_colors="#A9FBCE,#BD96F3,#FB7F7F"
-            app:background_radius="10dp"
+            app:rany_background_colors="#A9FBCE,#BD96F3,#FB7F7F"
+            app:rany_background_radius="10dp"
             app:layout_constraintStart_toEndOf="@+id/image_5"
             app:layout_constraintTop_toTopOf="@+id/image_5"
-            app:stroke_colors="#FB7F7F,#BD96F3,#A9FBCE"
-            app:stroke_width="2dp" />
+            app:rany_stroke_colors="#FB7F7F,#BD96F3,#A9FBCE"
+            app:rany_stroke_width="2dp" />
 
         <com.ranycess.commonview.view.TextViewR
             android:id="@+id/image_doc_6"

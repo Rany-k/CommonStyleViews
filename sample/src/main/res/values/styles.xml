@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="titleTemplate">
-        <item name="background_colors">#A9FBCE,#BD96F3,#FB7F7F</item>
-        <item name="background_radius">10dp</item>
-        <item name="stroke_width">2dp</item>
-        <item name="stroke_colors">#FB7F7F,#BD96F3,#A9FBCE</item>
+        <item name="rany_background_colors">#A9FBCE,#BD96F3,#FB7F7F</item>
+        <item name="rany_background_radius">10dp</item>
+        <item name="rany_stroke_width">2dp</item>
+        <item name="rany_stroke_colors">#FB7F7F,#BD96F3,#A9FBCE</item>
     </style>
 </resources>
