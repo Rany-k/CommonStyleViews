@@ -58,24 +58,24 @@ class CommonBackgroundStyleUnit(private val targetView: View):CommonBackgroundSt
 
     fun initStyledAttributes(typedArray: TypedArray){
 
-        typedArray.getInt(R.styleable.CommonBackgroundStyle_deviation,-1).let {
+        typedArray.getInt(R.styleable.CommonBackgroundStyle_rany_deviation,-1).let {
             if (it != -1){
                 strokeDeviation = it
                 fillDeviation = it
             }
         }
 
-        strokeWidth = typedArray.getDimension(R.styleable.CommonBackgroundStyle_stroke_width,0f)
-        val strokeColorsString = typedArray.getString(R.styleable.CommonBackgroundStyle_stroke_colors)
+        strokeWidth = typedArray.getDimension(R.styleable.CommonBackgroundStyle_rany_deviation,0f)
+        val strokeColorsString = typedArray.getString(R.styleable.CommonBackgroundStyle_rany_stroke_colors)
         strokeColors = encodeColors(strokeColorsString)
-        strokeDeviation = typedArray.getInt(R.styleable.CommonBackgroundStyle_stroke_deviation,strokeDeviation)
+        strokeDeviation = typedArray.getInt(R.styleable.CommonBackgroundStyle_rany_stroke_deviation,strokeDeviation)
 
-        val fillColorsString = typedArray.getString(R.styleable.CommonBackgroundStyle_background_colors)
+        val fillColorsString = typedArray.getString(R.styleable.CommonBackgroundStyle_rany_background_colors)
         fillColors = encodeColors(fillColorsString)
-        fillDeviation = typedArray.getInt(R.styleable.CommonBackgroundStyle_background_deviation,strokeDeviation)
+        fillDeviation = typedArray.getInt(R.styleable.CommonBackgroundStyle_rany_background_deviation,strokeDeviation)
 
 
-        paintRadius = typedArray.getDimension(R.styleable.CommonBackgroundStyle_background_radius,paintRadius)
+        paintRadius = typedArray.getDimension(R.styleable.CommonBackgroundStyle_rany_background_radius,paintRadius)
 
     }
 
