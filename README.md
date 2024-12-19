@@ -2,7 +2,7 @@
 # CommonStyleViews
 
 ## base core
-com.github.Rany-k.CommonStyleViews:CommonStyleViews-Core:1.0.0-Beta02
+com.github.Rany-k.CommonStyleViews:CommonStyleViews-Core:1.0.0-Beta07
 
 ### CommonView
-com.github.Rany-k.CommonStyleViews:CommonStyleViews-CommonView:1.0.0-Beta02
+com.github.Rany-k.CommonStyleViews:CommonStyleViews-CommonView:1.0.0-Beta07
