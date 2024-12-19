@@ -65,7 +65,7 @@ class CommonBackgroundStyleUnit(private val targetView: View):CommonBackgroundSt
             }
         }
 
-        strokeWidth = typedArray.getDimension(R.styleable.CommonBackgroundStyle_rany_deviation,0f)
+        strokeWidth = typedArray.getDimension(R.styleable.CommonBackgroundStyle_rany_stroke_width,0f)
         val strokeColorsString = typedArray.getString(R.styleable.CommonBackgroundStyle_rany_stroke_colors)
         strokeColors = encodeColors(strokeColorsString)
         strokeDeviation = typedArray.getInt(R.styleable.CommonBackgroundStyle_rany_stroke_deviation,strokeDeviation)
